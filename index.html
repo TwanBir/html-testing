@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OIDG: Interactive Development Group&trade;</title>
+	<link href="webpagestyle.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+	<script src='/jquery-3.2.1.min.js'></script>
+	<script src='/main.js'></script>
+</head>
+<body>
+	<div class="topbar">
+		<div class="navigation">
+			<div>
+				<a class="navigation_buttons" href="/#home">Home</a>
+				<a class="navigation_buttons" href="/#about">About</a>
+				<a class="navigation_buttons" href="/#contact">Contact</a>
+			</div>
+			<p id="motto">Online Interactive Development Group: Design Made Smart&copy;</p>
+			<img id="toggleup" src="/toggle.svg">
+		</div>
+		<img id="toggledown" src="/toggle.svg">
+		<script type="text/javascript">
+			$('#toggledown').hide();
+			//$('#toggleup').hide();
+			$('.navigation').hide();
+		</script>
+	</div>
+	<div class="landing" id="home">
+		<div class="header">
+			<h1>Online Interactive Development Group&trade;</h1>
+		</div>
+		<script type="text/javascript">$('.header').hide();</script>
+	</div>
+	<div class="border"></div>
+	<div class="container1 container" id="about" align="center">
+  			<div class="textblock">
+  				<h3>About us</h3>
+  				<p>Our company, founded in 2017, has always been intrigued by responsive web design. We invision a world where every website works on every device, regardless of the device.</p>	
+  	  		</div>
+  	  		<img id="working" class="containerpicture" src="logo.png" alt="work in progress...">
+  	</div>
+  	<div class="border"></div>
+  	<div class="container2 container" id="contact" align="center">
+  			<div class="textblock textblock2">
+  				<h3>Contact</h3>
+  				<p>This is my very first webpage and higly expiremantal. Changes will be done rapidly. <br> <br> Thanks for your understanding.</p>	
+  	  		</div>
+  	  		<img id="phone" class="containerpicture" src="phone.svg" alt="work in progress...">
+  	</div>
+
+<script type="text/javascript">
+	$('#toggledown').click(function() {
+	$('.navigation').slideDown(400);
+	$(this).slideUp(400);
+	//setTimeout(function() {$('#toggleup').slideDown(400); }, 400);	
+});
+</script>
+<script type="text/javascript">
+	$('#toggleup').click(function() {
+	$('.navigation').slideUp(400);
+	//$(this).slideUp(400);
+	setTimeout(function() {$('#toggledown').slideDown(400); }, 200);	
+});
+</script>
+</body>
+</html>
